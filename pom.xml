@@ -20,6 +20,8 @@
 
     <modules>
         <module>commons</module>
+        <module>entity</module>
+        <module>login-service</module>
     </modules>
 
     <!-- maven依赖管理-->
