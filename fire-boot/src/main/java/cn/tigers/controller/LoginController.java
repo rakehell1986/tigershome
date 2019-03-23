@@ -1,5 +1,7 @@
 package cn.tigers.controller;
 
+import cn.tigers.login.service.MessageService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,6 +12,9 @@ import org.springframework.web.bind.annotation.*;
 @EnableAutoConfiguration
 @RequestMapping(value = "/forest")
 public class LoginController {
+
+    @Autowired
+    private MessageService messageService;
 
     @RequestMapping(value = {"/hello", "login"}, method = RequestMethod.GET)
     private String login() {
@@ -30,6 +35,6 @@ public class LoginController {
             return "Please give your userId";
         }
 
-        return userId;
+        return messageService.getMessage();
     }
 }
