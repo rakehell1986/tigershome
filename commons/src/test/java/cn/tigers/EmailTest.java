@@ -29,10 +29,10 @@ public class EmailTest {
     public void testEmail() {
         try {
             JavaMailSenderImpl javaMailSender = new JavaMailSenderImpl();
-            javaMailSender.setHost("smtp.office365.com");
-            javaMailSender.setPort(Integer.valueOf("587"));
-            javaMailSender.setUsername("admin@smartagent.rocks");
-            javaMailSender.setPassword("Aa88888888!");
+            javaMailSender.setHost(******);
+            javaMailSender.setPort(******);
+            javaMailSender.setUsername("******");
+            javaMailSender.setPassword("*******");
 
 
 
@@ -43,8 +43,8 @@ public class EmailTest {
             sf.setTrustAllHosts(true);
             properties.put("mail.smtp.ssl.socketFactory", sf);
             properties.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory");
-            properties.put("mail.smtp.socketFactory.port","587");
-            properties.put("mail.smtp.socketFactory.fallback", "true");
+            properties.put("mail.smtp.socketFactory.port","*****");
+            properties.put("mail.smtp.socketFactory.fallback", "****");
 
 
             javaMailSender.setJavaMailProperties(properties);
@@ -57,7 +57,7 @@ public class EmailTest {
             mimeMessageHelper = new MimeMessageHelper(mimeMessage, false, "UTF-8");
             mimeMessageHelper.setSubject("test");
             mimeMessageHelper.setTo(new String[]{"rakehell@live.cn", "wwei.miao@gmail.com"});
-            mimeMessageHelper.setFrom("admin@smartagent.rocks");
+            mimeMessageHelper.setFrom("******");
 
             javaMailSender.send(mimeMessage);
         } catch (MessagingException e) {
