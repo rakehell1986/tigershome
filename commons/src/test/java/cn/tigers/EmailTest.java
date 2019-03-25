@@ -56,7 +56,7 @@ public class EmailTest {
 
             mimeMessageHelper = new MimeMessageHelper(mimeMessage, false, "UTF-8");
             mimeMessageHelper.setSubject("test");
-            mimeMessageHelper.setTo(new String[]{"rakehell@live.cn", "miaoweiwei495@pingan.com.cn"});
+            mimeMessageHelper.setTo(new String[]{"rakehell@live.cn", "wwei.miao@gmail.com"});
             mimeMessageHelper.setFrom("admin@smartagent.rocks");
 
             javaMailSender.send(mimeMessage);
